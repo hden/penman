@@ -15,6 +15,9 @@ Usage
     var transformer = function (string) {
       return string + '!!';
     }
+
+    // Basic Usage
+
     app
       .map('column1', 'foo', 'default value')
       .map('column2', 'bar', 'default value', transformer)
@@ -32,3 +35,11 @@ Usage
 
     var row = app(target);
     row === 'fooValue,bar!!,wow';
+
+    // Streaming
+
+    var transformingStream = app.stream()
+    transformingStream.on('data', function (chunk, encoding, done) {
+      var row = chunk.toString(encoding);
+      row === 'fooValue,bar!!,wow';
+    });
