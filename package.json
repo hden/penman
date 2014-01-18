@@ -1,0 +1,29 @@
+{
+  "name": "penman",
+  "version": "0.0.0",
+  "description": "JSON to CSV with ease",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hden/penman.git"
+  },
+  "keywords": [
+    "json",
+    "csv"
+  ],
+  "author": "Hao-kang Den <haokang.den@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hden/penman/issues"
+  },
+  "homepage": "https://github.com/hden/penman",
+  "dependencies": {
+    "chai": "~1.8.1"
+  },
+  "devDependencies": {
+    "mocha": "~1.17.0"
+  }
+}
