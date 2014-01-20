@@ -14,7 +14,7 @@ penman = (obj = {}) ->
     value = getPathValue(path, obj) or defaults
     value = transform value if transform?
     value
-  row.join penman._delimiter
+  "#{row.join(penman._delimiter)}\n"
 
 penman.getPathValue = getPathValue
 penman._delimiter   = ','

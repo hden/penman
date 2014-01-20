@@ -29,7 +29,7 @@ describe 'penman', ->
 
   it 'should map path', ->
     result = app target
-    assert.equal result, 'fooValue,bar!!,wow'
+    assert.equal result, 'fooValue,bar!!,wow\n'
 
   it 'should provide a streaming interface', (done) ->
     transformingStream = app.stream()
@@ -38,7 +38,7 @@ describe 'penman', ->
     transformingStream.on 'data', (chunk, enc = 'utf-8', cb) ->
       assert.instanceOf chunk, Buffer
       result = do chunk.toString
-      assert.equal result, 'fooValue,bar!!,wow'
+      assert.equal result, 'fooValue,bar!!,wow\n'
       do done
 
     transformingStream.write target
