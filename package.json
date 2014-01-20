@@ -1,6 +1,6 @@
 {
   "name": "penman",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "JSON to CSV with ease",
   "main": "index.js",
   "scripts": {
